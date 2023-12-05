@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="css/main.css">
+    <title>{% block title%}{%endblock%}</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <a href="/">
+                    <img src="../static/css/img/VoGU.png" height="50px" alt="VoGU"/>
+                </a>
+                <a href="/">Анкеты.online</a>
+            </div>
+            <div class="menu">
+                <li class="nav-item"><a href="/">Главная</a></li>
+                <li class="nav-item"><a href="/create_e" >Добавить</a></li>
+                <li class="nav-item"><a href="/spravka" >Помощь</a></li>
+                <li class="nav-item"><a href="/login">Выйти</a></li>
+            </div>
+        </div> 
+    
+    {% block body%}
+    
+    {%endblock%}
+</div>
+</body>
+</html>
