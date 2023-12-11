@@ -248,6 +248,11 @@ def report_view(id):
     view3 = Questions.query.filter_by(id = Answers.questions_id).all()
     return render_template("report.html", view=view, view2=view2, view3=view3)
 
+@app.route('/event/qr/<int:id>')
+def qr_view(id):
+    view = Event.query.get(id)
+    return render_template("qr.html", view=view)
+
 
 # @app.route('/event/survey/<int:id>')
 # def survey_view(id):
